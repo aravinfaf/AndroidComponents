@@ -6,7 +6,6 @@ import android.util.Log
 
 class MyIntentService : IntentService("name") {
 
-    private lateinit var instance : MyIntentService
 
     init {
         instance = this
@@ -14,6 +13,12 @@ class MyIntentService : IntentService("name") {
 
     companion object{
         var isRunning : Boolean = false
+        private lateinit var instance : MyIntentService
+
+        fun stopService(){
+            isRunning = false
+            instance.stopSelf()
+        }
     }
 
     override fun onHandleIntent(p0: Intent?) {

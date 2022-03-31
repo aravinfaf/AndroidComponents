@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidComponents">
         <activity
-            android:name=".intent_service.IntentServiceActivity"
+            android:name=".service.ServiceActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
     <service android:name=".intent_service.MyIntentService"/>
+    <service android:name=".service.MyService"/>
         </application>
 
 </manifest>

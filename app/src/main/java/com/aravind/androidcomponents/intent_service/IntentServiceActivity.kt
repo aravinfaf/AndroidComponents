@@ -25,7 +25,7 @@ class IntentServiceActivity : AppCompatActivity() {
 
         binding.stopBtn.setOnClickListener {
             MyIntentService.isRunning = false
-            MyIntentService().stopSelf()
+            MyIntentService.stopService()
             binding.infoTv.text = "Service stopped"
         }
     }
